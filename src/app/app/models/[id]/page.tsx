@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
-import Workspace, { TABS, type TabKey, type VersionRow } from "@/components/Workspace";
+import Workspace, { type VersionRow } from "@/components/Workspace";
+import { TABS, type TabKey } from "@/lib/tabs";
 import { getAppContext } from "@/lib/app-context";
 import { modelInputsSchema } from "@/lib/engine/types";
 

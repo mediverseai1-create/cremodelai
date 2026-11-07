@@ -12,13 +12,7 @@ import { PlanPanel } from "./PlanPanel";
 import { ScenarioPanel } from "./ScenarioPanel";
 import { EditableTable, Field, Panel, Stat } from "./ui";
 
-export const TABS = [
-  ["profile", "Business profile"], ["revenue", "Revenue & pricing"], ["costs", "Costs"], ["staffing", "Staffing"],
-  ["investments", "Investments"], ["funding", "Funding"], ["projections", "Projections"], ["profitability", "Profitability"],
-  ["breakeven", "Break-even"], ["cashflow", "Cash flow"], ["scenarios", "Scenarios"], ["ai", "AI analysis"],
-  ["plan", "Business plan"], ["reports", "Reports"], ["history", "History"],
-] as const;
-export type TabKey = (typeof TABS)[number][0];
+import { TABS, type TabKey } from "@/lib/tabs";
 
 export interface VersionRow { id: string; version_number: number; created_at: string; note: string | null; inputs: ModelInputs }
 interface Props {

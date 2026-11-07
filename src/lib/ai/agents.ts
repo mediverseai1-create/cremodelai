@@ -62,3 +62,6 @@ export function buildContext(name: string, inputs: ModelInputs, r: ModelResult, 
     ...(extra ? { additional: extra } : {}),
   });
 }
+
+const ANALYSIS_SHAPE = `\n\nReturn ONLY JSON of exactly this shape: {"summary": string, "findings": [{"title": string, "detail": string, "evidence": "calculation"|"assumption"|"interpretation"|"unverified", "severity": "info"|"warning"|"risk"}] (max 12), "recommendations": [{"title": string, "rationale": string, "priority": "low"|"medium"|"high"}] (max 8), "missingInformation": [string], "limitations": string}.`;
+for (const a of Object.values(AGENTS)) if (a.schema === analysisSchema) a.instruction += ANALYSIS_SHAPE;
