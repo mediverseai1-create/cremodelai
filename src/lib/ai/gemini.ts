@@ -22,7 +22,7 @@ async function callGemini(prompt: string, json: boolean, attempts = 2): Promise<
   for (let i = 0; i < attempts; i++) {
     try {
       const res = await ai.models.generateContent({
-        model: process.env.GEMINI_MODEL || "gemini-2.5-flash",
+        model: process.env.GEMINI_MODEL || "gemini-3.8-flash",
         contents: prompt,
         config: { systemInstruction: SYSTEM_RULES, ...(json ? { responseMimeType: "application/json" } : {}), temperature: 0.3 },
       });
