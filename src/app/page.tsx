@@ -90,27 +90,15 @@ export default function Home() {
           <nav className="hidden gap-8 text-sm font-semibold md:flex" aria-label="Site"><a href="#finds">What it finds</a><a href="#modules">Modules</a><a href="#how">How it works</a><a href="#pricing">Pricing</a></nav>
           <div className="flex items-center gap-4 text-sm font-semibold"><Link href="/login">Log in</Link><Link href="/signup" className="rounded-xl px-5 py-3 text-white" style={cta}>Get started for free</Link></div>
         </header>
-        <div className="mx-auto grid max-w-[1200px] items-center gap-10 px-5 pb-24 pt-10 md:grid-cols-[1.3fr_1fr]">
-          <div>
+        <div className="mx-auto max-w-[1200px] px-5 pb-28 pt-12">
+          <div className="max-w-3xl">
             <p className="mb-5 inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-semibold"><span className="h-2 w-2 rounded-full bg-[#86efac]" />The AI revenue platform for sales teams</p>
             <h1 className="font-display text-5xl font-extrabold leading-[1.02] tracking-tight md:text-[4.5rem]">The AI that stops deals <span className="text-[#14142b]">slipping through</span> a messy pipeline.</h1>
             <p className="mt-7 max-w-xl text-lg leading-relaxed text-white/90">CreModelAI reads your sales, deals and calls, spots the customers going quiet, and hands your team a clear list of what to do next. Every week, without the spreadsheet.</p>
             <div className="mt-8 flex flex-wrap gap-3"><Link href="/signup" className="rounded-xl px-7 py-4 font-semibold text-white shadow-lg" style={cta}>Get your first briefing free</Link><Link href="/demo" className="rounded-xl bg-white/15 px-7 py-4 font-semibold text-white">See it on sample data</Link></div>
             <ul className="mt-7 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/90">{["Upload a CSV or Excel export", "First briefing in minutes", "Every number calculated, never guessed"].map((t) => <li key={t} className="flex items-center gap-2"><Check size={16} />{t}</li>)}</ul>
           </div>
-          <div className="rounded-3xl bg-white/95 p-5 text-[#14142b] shadow-2xl">
-            <div className="flex items-center justify-between"><p className="font-display font-extrabold">Monday briefing</p><span className="rounded-full bg-[#eef2ff] px-3 py-1 text-xs font-semibold" style={{ color: BLUE }}>Illustrative example</span></div>
-            <div className="mt-4 grid grid-cols-3 gap-2 text-center text-xs">
-              {[["Revenue", "vs last week"], ["At risk", "3 accounts"], ["Follow-ups", "5 due today"]].map(([a, b]) => (<div key={a} className="rounded-xl bg-[#f5f7ff] p-3"><p className="font-semibold text-[#6b7280]">{a}</p><p className="mt-1 font-display text-sm font-extrabold">{b}</p></div>))}
-            </div>
-            <p className="mt-4 text-xs font-bold uppercase tracking-widest text-[#6b7280]">Next best actions</p>
-            <ul className="mt-2 space-y-2 text-sm">
-              {[["Call the account whose orders dropped", "High"], ["Send the proposal you promised on Tuesday", "High"], ["Re-engage a customer quiet for 3 weeks", "Medium"]].map(([t, p]) => (
-                <li key={t} className="flex items-center justify-between gap-3 rounded-xl border border-[#e5e7eb] px-3 py-2.5"><span className="flex items-center gap-2"><span className="grid h-5 w-5 place-items-center rounded-full border-2" style={{ borderColor: BLUE }} />{t}</span><span className="rounded-full bg-[#fef3c7] px-2 py-0.5 text-[11px] font-bold text-[#92400e]">{p}</span></li>))}
-            </ul>
-            <p className="mt-4 rounded-xl bg-[#eef2ff] p-3 text-xs text-[#4b5563]">Sample layout, not real data. In your workspace every figure is calculated from your own uploads; the AI explains it and never invents it.</p>
-          </div>
-        </div>
+                  </div>
       </section>
 
       <section className="mx-auto max-w-[1200px] px-5 py-20">
