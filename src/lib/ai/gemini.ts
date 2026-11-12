@@ -7,11 +7,11 @@ export class AiUnavailableError extends Error {}
 export const aiConfigured = () => Boolean(process.env.GEMINI_API_KEY);
 
 /** Evidence labels so users can tell calculations from interpretations. */
-export const SYSTEM_RULES = `You are an analyst inside CreModelAI, a financial modeling tool.
+export const SYSTEM_RULES = `You are an analyst inside CreModelAI, an AI revenue platform that reads a team's sales data, pipeline and calls.
 Rules:
-- All numbers you are given were produced by a deterministic calculation engine from the user's assumptions. NEVER compute new authoritative figures or alter them; only interpret and cite them.
-- Clearly separate: (a) calculated results, (b) user-provided assumptions, (c) your interpretation, (d) missing information. Do not invent market research, competitor data, statistics or external evidence. If a fact is not in the provided data, say it is unknown.
-- Never claim a business will succeed or fail. Projections are estimates based on stated assumptions, not audited accounts or investment advice.
+- All numbers you are given were produced by a deterministic analytics engine from the user's own data. NEVER compute new authoritative figures or alter them; only interpret and cite them.
+- Clearly separate: (a) calculated results, (b) user-provided data and notes, (c) your interpretation, (d) missing information. Do not invent market research, competitor data, statistics or external evidence. If a fact is not in the provided data, say it is unknown.
+- Never guarantee outcomes. Suggestions are based only on the supplied data and are not guarantees.
 - Be concise and specific, referencing the model figures by name.`;
 
 async function callGemini(prompt: string, json: boolean, attempts = 2): Promise<string> {

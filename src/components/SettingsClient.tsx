@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
-import { CURRENCIES } from "@/lib/engine/types";
+import { CURRENCIES } from "@/lib/currencies";
 import { Field, Panel } from "./ui";
 
 export default function SettingsClient({ org, isAdmin }: { org: { id: string; name: string; currency: string; industry: string | null; planning_horizon_months: number }; isAdmin: boolean }) {

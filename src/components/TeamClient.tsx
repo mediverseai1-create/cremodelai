@@ -36,7 +36,7 @@ export default function TeamClient({ members, orgId, roles, isAdmin, meId }: { m
         {msg && <p role="status" className={`mt-3 text-sm ${msg.ok ? "text-good" : "text-bad"}`}>{msg.t}</p>}
       </Panel>
       {isAdmin ? (
-        <Panel title="Add a member" note="They need a CreModelAI account first. Executive Viewers can read everything but cannot edit models.">
+        <Panel title="Add a member" note="They need a CreModelAI account first. View-only members can read everything but cannot change data.">
           <div className="flex flex-wrap gap-2">
             <input className="input max-w-xs" type="email" placeholder="teammate@company.com" value={email} onChange={(e) => setEmail(e.target.value)} aria-label="Email" />
             <select className="input w-auto" value={role} onChange={(e) => setRole(e.target.value)} aria-label="Role">{Object.entries(roles).map(([k, l]) => <option key={k} value={k}>{l}</option>)}</select>

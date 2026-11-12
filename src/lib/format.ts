@@ -22,3 +22,5 @@ export function download(name: string, text: string, type = "text/csv") {
   a.href = url; a.download = name; a.click();
   URL.revokeObjectURL(url);
 }
+export const compact = (n: number) => new Intl.NumberFormat("en-US", { notation: "compact", maximumFractionDigits: 1 }).format(n);
+export const today = () => new Date().toISOString().slice(0, 10);

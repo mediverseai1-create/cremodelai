@@ -7,9 +7,9 @@ const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://cremodelai.pro"),
-  title: { default: "CreModelAI — AI Business Modeling & Financial Intelligence", template: "%s · CreModelAI" },
-  description: "Build connected financial models, test pricing, costs and growth scenarios, and understand your funding needs before you commit. Model the business. Test the numbers. Make informed decisions.",
-  openGraph: { title: "CreModelAI", description: "AI Business Modeling & Financial Intelligence", type: "website" },
+  title: { default: "CreModelAI — The AI revenue platform for sales teams", template: "%s · CreModelAI" },
+  description: "Turn your sales data, pipeline and calls into one briefing: what changed, what is slipping and what your team should do next.",
+  openGraph: { title: "CreModelAI", description: "The AI revenue platform for sales teams", type: "website" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

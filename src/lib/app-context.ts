@@ -4,8 +4,8 @@ import { createClient } from "@/lib/supabase/server";
 
 export const EDIT_ROLES = ["owner", "administrator", "founder", "cfo", "analyst", "consultant", "finance_manager"];
 export const ROLE_LABELS: Record<string, string> = {
-  owner: "Owner", administrator: "Administrator", founder: "Founder", cfo: "CFO / Finance Director",
-  analyst: "Financial Analyst", consultant: "Business Consultant", finance_manager: "Finance Manager", viewer: "Executive Viewer",
+  owner: "Owner", administrator: "Admin", founder: "Founder", cfo: "Revenue Leader",
+  analyst: "Analyst", consultant: "Consultant", finance_manager: "Sales Manager", viewer: "Member (view only)",
 };
 
 /** Loads the signed-in user and their (first) organization; redirects to login/onboarding when missing. */
